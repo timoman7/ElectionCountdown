@@ -11,10 +11,10 @@ Date.prototype.countdown = function(endDate){
 	let diffMS = endDateMS - startDateMS;
 
 	let diff = {
-		day: Math.round(diffMS/msUnits.day),
-		hour: (Math.round(diffMS/msUnits.hour)%24),
-		minute: (Math.round(diffMS/msUnits.minute)%60),
-		second: (Math.round(diffMS/msUnits.second)%60)
+		day: Math.floor(diffMS/msUnits.day),
+		hour: (Math.floor(diffMS/msUnits.hour)%24),
+		minute: (Math.floor(diffMS/msUnits.minute)%60),
+		second: (Math.floor(diffMS/msUnits.second)%60)
     };
 	return diff;
 };
