@@ -22,7 +22,10 @@ Date.prototype.countdown = function(endDate){
 let countdown = document.querySelector("#countdown");
 function updateCountdown(){
   let countdownObj = (new Date(Date.now())).countdown(electDay);
-  countdown.innerHTML = `${countdownObj.day} Day${countdownObj.day != 1 ? "s" : ""}\n${countdownObj.hour} Hour${countdownObj.hour != 1 ? "s" : ""}\n${countdownObj.minute} Minute${countdownObj.minute != 1 ? "s" : ""}\n${countdownObj.second} Second${countdownObj.second != 1 ? "s" : ""}`;
+  countdown.innerHTML = `${countdownObj.day} Day${countdownObj.day != 1 ? "s" : ""}<br>
+	${countdownObj.hour} Hour${countdownObj.hour != 1 ? "s" : ""}<br>
+	${countdownObj.minute} Minute${countdownObj.minute != 1 ? "s" : ""}<br>
+	${countdownObj.second} Second${countdownObj.second != 1 ? "s" : ""}`;
 }
 window.addEventListener('load',function(){
   setInterval(updateCountdown, 100);
